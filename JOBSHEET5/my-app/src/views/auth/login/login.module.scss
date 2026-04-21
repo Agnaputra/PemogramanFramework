@@ -1,0 +1,13 @@
+/* Gunakan @use untuk menggantikan @import */
+@use "../../../styles/colors.scss" as colors;
+@use "sass:map"; /* Import modul built-in map */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Gunakan map.get dan panggil nama file sebagai namespace (colors) */
+  background-color: map.get(colors.$schema, color-secondary); 
+}
